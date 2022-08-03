@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="description" content="Разработка сайтов под ключ" />
@@ -12,7 +11,6 @@
   <link rel="stylesheet" href="./css/normalaze.css" />
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
-
 <body data-page>
   <!-- Header section-->
   <header class="header">
@@ -406,20 +404,22 @@
         </div>
         <div class="fooer-form">
           <form class="form">
-          <strong class="fooer-form-title footer-social-title">Підпишіться на розсилку</strong>
-         <div class="fooer-form-set">
-          <div class="form-mail-footer">
-            <label class="form-labe-footer" for="footer-user-email"></label>
-          <input class="form-input-footer" type="email" id="footer-user-email"  placeholder="E-mail"/>
-          </div>
-          <div class="form-group-footer">
-            <button class="footer-form-btg hero-button" type="submit">
-              Підписатися <svg class="footer-btg-icon" width="24" height="24">
-                <use href="./imeges/icomoon.svg#icon-send"></use>
-              </svg></button>
-          </div>
-         </div>
-        </form>
+            <strong class="fooer-form-title footer-social-title">Підпишіться на розсилку</strong>
+            <div class="fooer-form-set">
+              <div class="form-mail-footer">
+                <label class="form-labe-footer" for="footer-user-email"></label>
+                <input class="form-input-footer" type="email" id="footer-user-email" placeholder="E-mail" />
+              </div>
+              <div class="form-group-footer">
+                <button class="footer-form-btg hero-button" type="submit">
+                  Підписатися
+                  <svg class="footer-btg-icon" width="24" height="24">
+                    <use href="./imeges/icomoon.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -434,45 +434,51 @@
       </button>
       <form class="form-modal">
         <strong class="form-title">Залиште свої дані, ми вам передзвонимо</strong>
-       <div class="form-group-wrapper">
-         <div class="form-group">
-          <label class="form-labe" for="user-name">Ім'я</label>
-          <input class="form-input" type="text" id="user-name" />
-          <svg class="form-icon" width="18" height="18">
-            <use href="./imeges/icomoon.svg#person"></use>
+        <div class="form-group-wrapper">
+          <div class="form-group">
+            <label class="form-labe" for="user-name">Ім'я</label>
+            <input class="form-input" type="text" id="user-name"/>
+            <svg class="form-icon" width="18" height="18">
+              <use href="./imeges/icomoon.svg#person"></use>
+            </svg>
+          </div>
+          <div class="form-group">
+            <label class="form-labe" for="user-phone">Телефон</label>
+            <input class="form-input" type="tel" id="user-phone" />
+            <svg class="form-icon" width="18" height="18">
+              <use href="./imeges/icomoon.svg#phone"></use>
+            </svg>
+          </div>
+          <div class="form-group">
+            <label class="form-labe" for="user-email">Пошта</label>
+            <input class="form-input" type="email" id="user-email" />
+            <svg class="form-icon" width="18" height="18">
+              <use href="./imeges/icomoon.svg#email-form"></use>
+            </svg>
+          </div>
+          <div class="form-group">
+            <label class="form-labe" for="user-comment">Коментар</label>
+            <textarea class="form-input form-input-comment"  id="user-comment"
+              placeholder="Введіть текст"></textarea>
+          </div>
+        </div>
+        <label class="check-label">
+          <input class="check-input portfolio-title-hidden" type="checkbox" name="check" />
+          <svg class="check-icon" width="16" height="15">
+            <use class="icon-check-of" href="./imeges/icomoon.svg#checkbox-ramka"></use>
+            <use class="icon-check-on" href="./imeges/icomoon.svg#icon-check"></use>
           </svg>
-        </div>
-        <div class="form-group">
-          <label class="form-labe" for="user-phone">Телефон</label>
-          <input class="form-input" type="tel" id="user-phone" />
-          <svg class="form-icon" width="18" height="18">
-            <use href="./imeges/icomoon.svg#phone"></use>
-          </svg>
-        </div>
-        <div class="form-group">
-          <label class="form-labe" for="user-email">Пошта</label>
-          <input class="form-input" type="email" id="user-email" />
-          <svg class="form-icon" width="18" height="18">
-            <use href="./imeges/icomoon.svg#email-form"></use>
-          </svg>
-        </div>
-        <div class="form-group">
-          <label class="form-labe" for="user-comment">Коментар</label>
-          <textarea class="form-input form-input-comment" type="text" id="user-comment" placeholder="Введіть текст"></textarea>
-        </div>
-       </div>
-        <div class="check-group">
-          <input type="checkbox" name="" id="" />
-          <span>Погоджуюся з розсилкою та приймаю
-            <a href="">Умови договору</a></span>
-        </div>
+          <span class="check-text">Погоджуюся з розсилкою та приймаю
+            <a class="check-link link" href="">Умови договору</a></span>
+        </label>
         <div class="modal-form-button-wrapper">
-          <button class="modal-form-bt hero-button" type="submit">Відправити</button>
+          <button class="modal-form-bt hero-button" type="submit">
+            Відправити
+          </button>
         </div>
       </form>
     </div>
   </div>
   <script src="./js/modal.js"></script>
 </body>
-
 </html>

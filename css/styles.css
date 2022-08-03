@@ -34,6 +34,18 @@ p {
   text-decoration: none;
   color: currentColor;
 }
+.visuaaly-checkbox {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 /* base styles */
 .icon {
   transition-property: fill;
@@ -662,9 +674,35 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.check-group {
-  display: block;
+.check-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
   margin-bottom: 30px;
+}
+.check-input:checked + .check-icon .icon-check-on {
+  opacity: 1;
+}
+.check-input:checked + .check-icon .icon-check-of {
+  opacity: 0;
+  transition: opacity var(--transition-time);
+  transition-timing-function: var(--transition-function);
+}
+.icon-check-of {
+  opacity: 1;
+}
+.icon-check-on {
+  opacity: 0;
+  transition: opacity var(--transition-time);
+  transition-timing-function: var(--transition-function);
+}
+.check-text {
+  user-select: none;
+}
+.check-link {
+  color: var(--color-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 .modal-form-bt {
   padding-left: 52px;
@@ -688,13 +726,15 @@ body {
   box-shadow: 0px, 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   outline: transparent;
-  color: rgba(255, 255, 255, 0.6);
+  color: var();
   font-size: 16px;
   line-height: 1.25;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 15px;
+  padding-left: 16px;
 }
+.form-input-footer::placeholder {
+  color: rgba(255, 255, 255, 0.6);}
 .footer-form-btg {
   display: flex;
   align-items: center;
