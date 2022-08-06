@@ -201,7 +201,10 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   margin: 0 auto;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
   font-family: "Roboto", sans-serif;
   border: none;
   background: var(--color-blue);
@@ -419,6 +422,7 @@ body {
   color: var(--color-white);
 }
 .footer-social-title {
+  display: block;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -572,7 +576,7 @@ body {
   height: 581px;
   border-radius: 4px;
   background-color: #ffffff;
-
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -594,16 +598,29 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 8px;
-  left: 490px;
+  right: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition-property: border-color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-function);
+}
+.footer-btg-icon {
+  transition-property: fill;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-function);
+}
+.modal-btn:hover {
+  border: 1px solid var(--color-blue);
+}
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
+  fill: var(--color-blue);
 }
 /*------- modal form ------*/
-.form-modal {
-  padding: 40px;
-}
+
 .form-title {
   display: block;
   text-align: center;
@@ -611,13 +628,16 @@ body {
   font-size: 20px;
   line-height: 1.15;
   font-weight: 700;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .form-group-wrapper {
   margin-bottom: 20px;
 }
 .form-group {
   position: relative;
+}
+.form-group:not(:last-child) {
+  margin-bottom: 28px;
 }
 .form-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -630,7 +650,6 @@ body {
   font-size: 12px;
   font-weight: 1.16;
   outline: transparent;
-  margin-bottom: 28px;
   width: 100%;
   transition-property: border-color;
   transition-duration: var(--transition-time);
@@ -653,7 +672,8 @@ body {
 .form-icon {
   position: absolute;
   left: 15px;
-  bottom: 40px;
+  top: 50%;
+  transform: translateY(-50%);
   transition-property: fill;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--transition-function);
@@ -663,6 +683,7 @@ body {
   fill: var(--color-blue);
 }
 .form-input-comment {
+  display: block;
   padding-left: 15px;
   padding-right: 15px;
   height: 120px;
@@ -680,6 +701,17 @@ body {
   justify-content: center;
   gap: 9px;
   margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.icon-check-of {
+  transition: fill var(--transition-time);
+  transition-timing-function: var(--transition-function);
+}
+.icon-check-on {
+  opacity: 0;
+  transition: opacity var(--transition-time);
+  transition-timing-function: var(--transition-function);
 }
 .check-input:checked + .check-icon .icon-check-on {
   opacity: 1;
@@ -689,13 +721,9 @@ body {
   transition: opacity var(--transition-time);
   transition-timing-function: var(--transition-function);
 }
-.icon-check-of {
-  opacity: 1;
-}
-.icon-check-on {
-  opacity: 0;
-  transition: opacity var(--transition-time);
-  transition-timing-function: var(--transition-function);
+.check-input:hover + .check-icon .icon-check-of,
+.check-input:focus + .check-icon .icon-check-of {
+  fill: var(--color-blue);
 }
 .check-text {
   user-select: none;
@@ -711,23 +739,24 @@ body {
 }
 
 /*------footer form ------*/
+.footer-form {
+  margin-left: auto;
+}
 .fooer-form-set {
   display: flex;
   gap: 12px;
-  margin-top: 20px;
   align-items: center;
 }
 .form-mail-footer {
   width: 358px;
 }
 .form-input-footer {
-  width: 100%;
-  background-color: var(--color-background-footer);
+  width: 358px;
+  background-color: transparent;
   border: 1px rgba(255, 255, 255, 0.3) solid;
-  box-shadow: 0px, 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   outline: transparent;
-  color: var();
+  color: var(--color-white);
   font-size: 16px;
   line-height: 1.25;
   padding-top: 15px;
@@ -735,7 +764,8 @@ body {
   padding-left: 16px;
 }
 .form-input-footer::placeholder {
-  color: rgba(255, 255, 255, 0.6);}
+  color: rgba(255, 255, 255, 0.6);
+}
 .footer-form-btg {
   display: flex;
   align-items: center;
